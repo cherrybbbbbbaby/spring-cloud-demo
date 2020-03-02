@@ -11,9 +11,9 @@ talk is cheap,show you the code.
 
 demo概述：  
 模拟微服务的环境
-访问localhost:5001/djh/server-infomation/serverInfo/get获取provider端的ip和端口信息  
-访问localhost:5001/djh/server-infomation/timeOutDemo/get/{timeMillis}模拟超时熔断
-访问localhost:5001/djh/server-infomation/exceptionDemo/get模拟异常熔断
+访问localhost:5001/djh/server-infomation/serverInfo/get获取provider端的ip和端口信息   
+访问localhost:5001/djh/server-infomation/timeOutDemo/get/{timeMillis}模拟超时熔断   
+访问localhost:5001/djh/server-infomation/exceptionDemo/get模拟异常熔断   
 
 
 
