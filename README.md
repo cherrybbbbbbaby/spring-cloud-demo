@@ -7,3 +7,20 @@ HR：“那我怎么知道你会？”
 苦于待过的项目组确实都没有用到过，所以写个小demo。   
 
 talk is cheap,show you the code.
+
+
+demo概述：
+
+
+模拟微服务的环境，获取provider的ip、端口信息。
+
+
+架构：
+
+注册中心：eureka集群（端口7001、7002）
+
+
+providor集群（端口9001,9002）微服务名称server-info-pervidor  
+consumer单机（端口8001）使用Feign调用微服务，开启Hystrix服务熔断，Ribbon负载均衡算法改为随机访问  
+zuul网关单机（端口5001）带同一前缀/djh，屏蔽路径server-info-pervidor转为/server-infomation  
+hystrix-dashboard单机（端口6001）  
