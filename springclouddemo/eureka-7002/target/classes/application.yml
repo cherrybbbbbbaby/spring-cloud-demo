@@ -1,0 +1,19 @@
+server:
+  port: 7002
+  
+
+spring:
+  application:
+    name: eureka-server-culster
+
+
+
+eureka:  instance:    instance-id: eureka-7002
+    prefer-ip-address: true
+  client:    service-url:
+      defaultZone: http://localhost:7001/eureka         #cluster config              
+        
+info:       #info page
+  discription: eureka server demo
+  artifactId: eureka-7002
+  version: 0.0.1-SNAPSHOT  

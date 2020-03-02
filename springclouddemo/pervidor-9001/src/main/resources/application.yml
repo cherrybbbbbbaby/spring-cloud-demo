@@ -1,0 +1,20 @@
+server:
+  port: 9001
+  
+  
+  
+spring:  application:    name: server-info-pervidor
+    
+eureka:
+  instance:
+    instance-id: server-info-pervidor-9001    #the shown instance name
+    prefer-ip-address: true       #the shown IP address
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka,http://localhost:7002/eureka     #discovery cluster
+      
+      
+info:       #info page
+  discription: micro service pervidor demo
+  artifactId: $project.artifactId$
+  version: $project.version$

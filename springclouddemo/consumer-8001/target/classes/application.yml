@@ -1,0 +1,10 @@
+server:
+  port: 8001
+  
+eureka:  client:
+    register-with-eureka: false       #consumer no need to register    service-url:      defaultZone: http://localhost:7001/eureka,http://localhost:7002/eureka  
+      
+feign:  hystrix:    enabled: true     #enable hystrix call FallbackFactory
+    
+
+management:  endpoints:    web:      exposure:        include: hystrix.stream     #exposes the /actuator/hystrix.stream as a management endpoint
